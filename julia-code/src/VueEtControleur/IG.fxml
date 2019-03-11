@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VueEtControleur.Controleur">
+  <children>
+      <Pane style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+         <children>
+            <Text layoutX="22.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="textPR" layoutX="21.0" layoutY="71.0" prefHeight="27.0" prefWidth="186.0" promptText="ex.0" />
+            <Text fill="#bf9797" layoutX="23.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie Réelle : ">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="textPI" layoutX="22.0" layoutY="129.0" prefHeight="27.0" prefWidth="185.0" promptText="ex.-0.8" />
+            <TextField fx:id="textIteMax" layoutX="21.0" layoutY="183.0" prefHeight="27.0" prefWidth="185.0" />
+            <Text fill="#bf9797" layoutX="20.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre maximum d'itérations :">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnValider" layoutX="145.0" layoutY="361.0" mnemonicParsing="false" onAction="#clickBtnValider" style="-fx-background-color: #2B9FE4; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-width: 0; -fx-border-color: #2B9FE4;" text="Valider" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+            <Text layoutX="22.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnZoomer" layoutX="21.0" layoutY="423.0" mnemonicParsing="false" onAction="#clickBtnZoomer" prefHeight="27.0" prefWidth="86.0" style="-fx-background-color: white; -fx-border-radius: 25; -fx-border-width: 1.5; -fx-border-color: #2B9FE4;" text="Zoomer" textFill="#6b6a6a">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDezoomer" layoutX="22.0" layoutY="491.0" mnemonicParsing="false" onAction="#clickBtnDezoomer" prefHeight="27.0" prefWidth="92.0" style="-fx-background-color: white; -fx-border-radius: 25; -fx-border-width: 1.5; -fx-border-color: #2B9FE4;" text="Dézoomer" textFill="#6b6a6a">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+            <Text fill="#bf9797" layoutX="22.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie Imaginaire :">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnUp" layoutX="149.0" layoutY="423.0" mnemonicParsing="false" onAction="#clickBtnUp" style="-fx-background-color: white; -fx-border-radius: 25; -fx-border-width: 1.5; -fx-border-color: #2B9FE4;" text="↑" textFill="#6b6a6a">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnLeft" layoutX="121.0" layoutY="457.0" mnemonicParsing="false" onAction="#clickBtnLeft" style="-fx-background-color: white; -fx-border-radius: 25; -fx-border-width: 1.5; -fx-border-color: #2B9FE4;" text="←" textFill="#6b6a6a">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRight" layoutX="171.0" layoutY="458.0" mnemonicParsing="false" onAction="#clickBtnRight" style="-fx-background-color: white; -fx-border-radius: 25; -fx-border-width: 1.5; -fx-border-color: #2B9FE4;" text="→" textFill="#6b6a6a">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDown" layoutX="148.0" layoutY="491.0" mnemonicParsing="false" onAction="#clickBtnDown" style="-fx-background-color: white; -fx-border-radius: 25; -fx-border-width: 1.5; -fx-border-color: #2B9FE4;" text="↓" textFill="#6b6a6a">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+            <Pane fx:id="pnlVue" layoutX="230.0" prefHeight="600.0" prefWidth="670.0" style="-fx-background-color: #ddd;" />
+            <Button id="btnMandelbrot" fx:id="btnDezoomer1" layoutX="22.0" layoutY="533.0" mnemonicParsing="false" onAction="#clickBtnMandelbrot" prefHeight="44.0" prefWidth="180.0" style="-fx-background-color: white; -fx-border-radius: 25; -fx-border-width: 1.5; -fx-border-color: #B2433E;" text="Afficher l'ensemble de &#10;Mandelbrot" textAlignment="CENTER" textFill="#6b6a6a">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+  </children>
+</VBox>
